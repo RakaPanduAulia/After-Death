@@ -155,7 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd70b8c17a643243b4498d0ebb0959c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   moveSpeed: 10
+  jumpForce: 50
 --- !u!70 &231187162
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -388,9 +392,9 @@ GameObject:
   - component: {fileID: 537963608}
   - component: {fileID: 537963609}
   - component: {fileID: 537963610}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Upstairs 2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516,9 +520,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 666427515}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,9 +558,9 @@ GameObject:
   - component: {fileID: 956704101}
   - component: {fileID: 956704102}
   - component: {fileID: 956704103}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Upstairs 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -684,9 +688,9 @@ GameObject:
   - component: {fileID: 1507698959}
   - component: {fileID: 1507698960}
   - component: {fileID: 1507698961}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Underground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,9 +902,9 @@ GameObject:
   - component: {fileID: 1792736066}
   - component: {fileID: 1792736068}
   - component: {fileID: 1792736067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: One way platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1028,9 +1032,9 @@ GameObject:
   - component: {fileID: 1808553431}
   - component: {fileID: 1808553432}
   - component: {fileID: 1808553433}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stairs
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
