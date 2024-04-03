@@ -42,8 +42,8 @@ public class CharacterController2D : MonoBehaviour
 	private float jumpWallDistX = 0; //Distance between player and wall
 	private bool limitVelOnWallJump = false; //For limit wall jump distance with low fps
 
-	[SerializeField] private bool isRewinding = false;
-	List<Vector3> positions;
+	[SerializeField] private bool isRewinding = false; //If player is rewinding time
+	List<Vector3> positions; //List to store positions
 
 
 	[Header("Events")]
@@ -140,7 +140,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-		if(isRewinding)
+		if(isRewinding) //if player is rewinding, call rewind function and if not call record function
             Rewind();
         else
             Record();
@@ -148,8 +148,8 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Update()
     {
-        //Jika tombol space ditekan, panggil fungsi StartRewind dan jika dilepas panggil fungsi StopRewind
-        if(life <= 0)
+        //If player life is 0 and space key is pressed, start rewind
+        if(life <= 0 && Input.GetKeyDown(KeyCode.Space))
             StartRewind();
         if(isRewinding && positions.Count == 0)
             StopRewind();
@@ -309,14 +309,26 @@ public class CharacterController2D : MonoBehaviour
 
 	public void StartRewind()
     {
-        isRewinding = true;
-        //rb.isKinematic = true;
+		isRewinding = true;
+		invincible = true;
+		life = 10f;
+		animator.SetBool("IsDead", false); // Mengatur animasi kembali ke "hidup"
+    	animator.ResetTrigger("Hit"); // Reset trigger animasi terkena hit jika ada
+    	animator.SetBool("IsJumping", false); // Pastikan animasi jumping tidak aktif
+    	animator.SetBool("IsDashing", false); // Pastikan animasi dashing tidak aktif
+    	m_Rigidbody2D.velocity = Vector2.zero;
+		// GetComponent<Collider2D>().enabled = false;
+	    //rb.isKinematic = true;
     }
 
     //Fungsi untuk menghentikan rewind
     public void StopRewind()
     {
         isRewinding = false;
+		invincible = false;
+		m_Rigidbody2D.velocity = Vector2.zero; // Reset velocity untuk mencegah terpental
+    	canMove = true;
+		// GetComponent<Collider2D>().enabled = true;
         //rb.isKinematic = false;
     } 
 
@@ -393,6 +405,6 @@ public class CharacterController2D : MonoBehaviour
 		GetComponent<Attack>().enabled = false;
 		yield return new WaitForSeconds(0.4f);
 		m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
-		yield return new WaitForSeconds(1.1f);
+		// yield return new WaitForSeconds(1.1f);
 	}
 }
