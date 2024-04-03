@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
@@ -41,6 +42,10 @@ public class CharacterController2D : MonoBehaviour
 	private float jumpWallDistX = 0; //Distance between player and wall
 	private bool limitVelOnWallJump = false; //For limit wall jump distance with low fps
 
+	[SerializeField] private bool isRewinding = false;
+	List<Vector3> positions;
+
+
 	[Header("Events")]
 	[Space]
 
@@ -62,6 +67,12 @@ public class CharacterController2D : MonoBehaviour
 			OnLandEvent = new UnityEvent();
 	}
 
+	void Start()
+    {
+        //Inisialisasi list
+        positions = new List<Vector3>();
+        //rb = GetComponent<Rigidbody>();
+    }
 
 	private void FixedUpdate()
 	{
@@ -128,7 +139,21 @@ public class CharacterController2D : MonoBehaviour
 				m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
 			}
 		}
+
+		if(isRewinding)
+            Rewind();
+        else
+            Record();
 	}
+
+	public void Update()
+    {
+        //Jika tombol space ditekan, panggil fungsi StartRewind dan jika dilepas panggil fungsi StopRewind
+        if(life <= 0)
+            StartRewind();
+        if(isRewinding && positions.Count == 0)
+            StopRewind();
+    }
 
 
 	public void Move(float move, bool jump, bool dash)
@@ -282,6 +307,37 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+	public void StartRewind()
+    {
+        isRewinding = true;
+        //rb.isKinematic = true;
+    }
+
+    //Fungsi untuk menghentikan rewind
+    public void StopRewind()
+    {
+        isRewinding = false;
+        //rb.isKinematic = false;
+    } 
+
+	public void Record()
+    {
+        positions.Insert(0, transform.position);
+    }
+
+	void Rewind() 
+    {
+        if (positions.Count > 0) 
+        {
+            transform.position = positions[0];
+            positions.RemoveAt(0);
+        }
+        else
+        {
+            StopRewind();
+        }
+    }
+
 	IEnumerator DashCooldown()
 	{
 		animator.SetBool("IsDashing", true);
@@ -338,6 +394,5 @@ public class CharacterController2D : MonoBehaviour
 		yield return new WaitForSeconds(0.4f);
 		m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
 		yield return new WaitForSeconds(1.1f);
-		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 	}
 }
