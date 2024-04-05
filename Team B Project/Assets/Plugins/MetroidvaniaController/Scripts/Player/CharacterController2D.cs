@@ -356,8 +356,6 @@ public class CharacterController2D : MonoBehaviour
 		life = 10f;
 		animator.SetBool("IsDead", false); // Mengatur animasi kembali ke "hidup"
     	animator.ResetTrigger("Hit"); // Reset trigger animasi terkena hit jika ada
-    	animator.SetBool("IsJumping", false); // Pastikan animasi jumping tidak aktif
-    	animator.SetBool("IsDashing", false); // Pastikan animasi dashing tidak aktif
     	m_Rigidbody2D.velocity = Vector2.zero; // Reset velocity untuk mencegah terpental
 		// GetComponent<Collider2D>().enabled = false;
 	    //rb.isKinematic = true;
@@ -370,6 +368,7 @@ public class CharacterController2D : MonoBehaviour
 		invincible = false; // Menghentikan invincibility
 		m_Rigidbody2D.velocity = Vector2.zero; // Reset velocity untuk mencegah terpental
     	canMove = true; // Mengaktifkan kembali kemampuan bergerak
+		GetComponent<Attack>().enabled = true;
 		// GetComponent<Collider2D>().enabled = true;
         //rb.isKinematic = false;
     } 
