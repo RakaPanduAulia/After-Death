@@ -12,6 +12,16 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_WallCheck;								//Posicion que controla si el personaje toca una pared
+	
+	[System.Serializable]
+	public struct PlayerState //Struct to store player state
+	{
+		public Vector3 position;
+		public bool IsJumping;
+		public bool isDashing;
+		public bool isAttacking;
+		public bool facingRight;
+	}
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
@@ -43,8 +53,11 @@ public class CharacterController2D : MonoBehaviour
 	private bool limitVelOnWallJump = false; //For limit wall jump distance with low fps
 
 	[SerializeField] private bool isRewinding = false; //If player is rewinding time
-	List<Vector3> positions; //List to store positions
+	[SerializeField] private List<PlayerState> states; //List to store player states
+	[SerializeField] private List<Vector3> positions; //List to store positions
 
+	public GameObject panel; //Panel to display when player is dead
+	public GameObject rewindPanel; 
 
 	[Header("Events")]
 	[Space]
@@ -72,6 +85,8 @@ public class CharacterController2D : MonoBehaviour
         //Inisialisasi list
         positions = new List<Vector3>();
         //rb = GetComponent<Rigidbody>();
+		panel.SetActive(false);
+		rewindPanel.SetActive(false);
     }
 
 	private void FixedUpdate()
@@ -140,21 +155,30 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-		if(isRewinding) //if player is rewinding, call rewind function and if not call record function
+		if(isRewinding)  //if player is rewinding, call rewind function and if not call record function
+		{
             Rewind();
+		}
         else
+		{
             Record();
+		}
+		
+		DisplayPanel();
 	}
 
 	public void Update()
-    {
-        //If player life is 0 and space key is pressed, start rewind
-        if(life <= 0 && Input.GetKeyDown(KeyCode.Space))
-            StartRewind();
-        if(isRewinding && positions.Count == 0)
-            StopRewind();
-    }
-
+	{		
+		if(life <= 0 && Input.GetKeyDown(KeyCode.Space)) //if the player press space, call StartRewind function and if release call StopRewind function
+		{
+			StartRewind();
+		}
+		
+		if(isRewinding && states.Count == 0)
+		{
+			StopRewind();
+		}
+	}
 
 	public void Move(float move, bool jump, bool dash)
 	{
@@ -274,6 +298,24 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+	private void DisplayPanel()
+	{
+		if (life <= 0)
+		{
+			panel.SetActive(true);
+			rewindPanel.SetActive(false);
+		}
+		else if (isRewinding)
+		{
+			panel.SetActive(false);
+			rewindPanel.SetActive(true);
+		}
+		else
+		{
+			panel.SetActive(false);
+			rewindPanel.SetActive(false);
+		}
+	}
 
 	private void Flip()
 	{
@@ -316,7 +358,7 @@ public class CharacterController2D : MonoBehaviour
     	animator.ResetTrigger("Hit"); // Reset trigger animasi terkena hit jika ada
     	animator.SetBool("IsJumping", false); // Pastikan animasi jumping tidak aktif
     	animator.SetBool("IsDashing", false); // Pastikan animasi dashing tidak aktif
-    	m_Rigidbody2D.velocity = Vector2.zero;
+    	m_Rigidbody2D.velocity = Vector2.zero; // Reset velocity untuk mencegah terpental
 		// GetComponent<Collider2D>().enabled = false;
 	    //rb.isKinematic = true;
     }
@@ -324,31 +366,49 @@ public class CharacterController2D : MonoBehaviour
     //Fungsi untuk menghentikan rewind
     public void StopRewind()
     {
-        isRewinding = false;
-		invincible = false;
+        isRewinding = false; // Menghentikan rewind
+		invincible = false; // Menghentikan invincibility
 		m_Rigidbody2D.velocity = Vector2.zero; // Reset velocity untuk mencegah terpental
-    	canMove = true;
+    	canMove = true; // Mengaktifkan kembali kemampuan bergerak
 		// GetComponent<Collider2D>().enabled = true;
         //rb.isKinematic = false;
     } 
 
 	public void Record()
-    {
-        positions.Insert(0, transform.position);
-    }
+	{
+		PlayerState currentState = new PlayerState
+		{
+			position = transform.position,
+			IsJumping = animator.GetBool("IsJumping"),
+			isDashing = isDashing,
+			isAttacking = animator.GetBool("IsAttacking"), // Asumsikan Anda memiliki parameter Animator ini
+			facingRight = m_FacingRight
+		};
+		states.Insert(0, currentState);
+	}
+
 
 	void Rewind() 
-    {
-        if (positions.Count > 0) 
-        {
-            transform.position = positions[0];
-            positions.RemoveAt(0);
-        }
-        else
-        {
-            StopRewind();
-        }
-    }
+	{
+		if (states.Count > 0) 
+		{
+			PlayerState prevState = states[0];
+			transform.position = prevState.position;
+			animator.SetBool("IsJumping", prevState.IsJumping);
+			animator.SetBool("IsDashing", prevState.isDashing);
+			animator.SetBool("IsAttacking", prevState.isAttacking);
+			
+			if (prevState.facingRight != m_FacingRight)
+			{
+				Flip();
+			}
+			states.RemoveAt(0);
+		}
+		else
+		{
+			StopRewind();
+		}
+	}
 
 	IEnumerator DashCooldown()
 	{
