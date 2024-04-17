@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4542489516771230942}
   - component: {fileID: 1376544126607819867}
   - component: {fileID: 1153549110886832256}
+  - component: {fileID: 1092439605396476197}
   m_Layer: 0
   m_Name: OneWayBox
   m_TagString: Untagged
@@ -130,3 +131,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 0.35982108}
   m_EdgeRadius: 0
+--- !u!251 &1092439605396476197
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000448782726390823}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
