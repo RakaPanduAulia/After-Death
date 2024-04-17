@@ -4,67 +4,112 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-	public float dmgValue = 4;
-	public GameObject throwableObject;
-	public Transform attackCheck;
-	private Rigidbody2D m_Rigidbody2D;
-	public Animator animator;
-	public bool canAttack = true;
-	public bool isTimeToCheck = false;
+    public float dmgValue = 4;
+    public GameObject throwableObject;
+    public Transform attackCheck;
+    private Rigidbody2D m_Rigidbody2D;
+    public Animator animator;
+    public bool canAttack = true;
+    public bool canDash = true;
+    public bool isTimeToCheck = false;
 
-	public GameObject cam;
+    public GameObject cam;
+    public float dashSpeed = 10f; // kecepatan dash
+    public float dashTime = 0.5f; // durasi dash
+    public float dashCooldown = 1f; // cooldown dash
 
-	private void Awake()
-	{
-		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-	}
-
-	// Start is called before the first frame update
-	void Start()
+    private void Awake()
     {
-        
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.X) && canAttack)
-		{
-			canAttack = false;
-			animator.SetBool("IsAttacking", true);
-			StartCoroutine(AttackCooldown());
-		}
+        if (Input.GetMouseButtonDown(0) && canAttack) // jika klik kiri
+        {
+            canAttack = false;
+            animator.SetBool("IsAttacking", true);
+            StartCoroutine(AttackCooldown());
 
-		if (Input.GetKeyDown(KeyCode.V))
-		{
-			GameObject throwableWeapon = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f,-0.2f), Quaternion.identity) as GameObject; 
-			Vector2 direction = new Vector2(transform.localScale.x, 0);
-			throwableWeapon.GetComponent<ThrowableWeapon>().direction = direction; 
-			throwableWeapon.name = "ThrowableWeapon";
-		}
-	}
+            // Menyesuaikan rotasi karakter agar menghadap ke arah mouse
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mousePosition - transform.position).normalized;
+            if (direction.x < 0) // Jika arah ke kiri, balik karakter
+                transform.localScale = new Vector3(-1, 1, 1);
+            else // Jika arah ke kanan, biarkan seperti semula
+                transform.localScale = new Vector3(1, 1, 1);
+        }
 
-	IEnumerator AttackCooldown()
-	{
-		yield return new WaitForSeconds(0.25f);
-		canAttack = true;
-	}
+        if (Input.GetMouseButtonDown(0) && canDash) // jika klik kiri dan bisa dash
+        {
+            canDash = false;
+            animator.SetBool("IsAttacking", true);
+            StartCoroutine(DashTowardsMouse());
+            StartCoroutine(DashCooldown());
+            StartCoroutine(AttackCooldown());
 
-	public void DoDashDamage()
-	{
-		dmgValue = Mathf.Abs(dmgValue);
-		Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f);
-		for (int i = 0; i < collidersEnemies.Length; i++)
-		{
-			if (collidersEnemies[i].gameObject.tag == "Enemy")
-			{
-				if (collidersEnemies[i].transform.position.x - transform.position.x < 0)
-				{
-					dmgValue = -dmgValue;
-				}
-				collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
-				cam.GetComponent<CameraFollow>().ShakeCamera();
-			}
-		}
-	}
+            // Menyesuaikan rotasi karakter agar menghadap ke arah mouse
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mousePosition - transform.position).normalized;
+            if (direction.x < 0) // Jika arah ke kiri, balik karakter
+                transform.localScale = new Vector3(-1, 1, 1);
+            else // Jika arah ke kanan, biarkan seperti semula
+                transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            GameObject throwableWeapon = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f, -0.2f), Quaternion.identity) as GameObject;
+            Vector2 direction = new Vector2(transform.localScale.x, 0);
+            throwableWeapon.GetComponent<ThrowableWeapon>().direction = direction;
+            throwableWeapon.name = "ThrowableWeapon";
+        }
+    }
+
+    IEnumerator AttackCooldown()
+    {
+        yield return new WaitForSeconds(0.25f);
+        canAttack = true;
+    }
+
+    IEnumerator DashCooldown()
+    {
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true; // bisa dash lagi
+    }
+
+    IEnumerator DashTowardsMouse()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - transform.position).normalized;
+        float startTime = Time.time;
+
+        while (Time.time < startTime + dashTime)
+        {
+            m_Rigidbody2D.velocity = direction * dashSpeed;
+            yield return null;
+        }
+
+        m_Rigidbody2D.velocity = Vector2.zero;
+        DoDashDamage();
+    }
+
+    public void DoDashDamage()
+    {
+        dmgValue = Mathf.Abs(dmgValue);
+        Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f);
+        for (int i = 0; i < collidersEnemies.Length; i++)
+        {
+            if (collidersEnemies[i].gameObject.tag == "Enemy")
+            {
+                if (collidersEnemies[i].transform.position.x - transform.position.x < 0)
+                {
+                    dmgValue = -dmgValue;
+                }
+                collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
+                cam.GetComponent<CameraFollow>().ShakeCamera();
+            }
+        }
+    }
 }
