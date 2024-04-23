@@ -462,19 +462,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4542489516771230942, guid: 87e450dc9f03afe49a8399cad89e00df, type: 3}
   m_PrefabInstance: {fileID: 3287418483662953899}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &454897528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454897525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70509e89a4c598b4ca53ee3fa1442803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!251 &454897530
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -708,9 +695,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5000448782726390823, guid: 87e450dc9f03afe49a8399cad89e00df, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1953960218}
     - targetCorrespondingSourceObject: {fileID: 5000448782726390823, guid: 87e450dc9f03afe49a8399cad89e00df, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1953960217}
@@ -3110,19 +3094,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &1953960218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953960215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70509e89a4c598b4ca53ee3fa1442803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 0.5
 --- !u!1001 &1966819959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3525,9 +3496,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5000448782726390823, guid: 87e450dc9f03afe49a8399cad89e00df, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 454897528}
     - targetCorrespondingSourceObject: {fileID: 5000448782726390823, guid: 87e450dc9f03afe49a8399cad89e00df, type: 3}
       insertIndex: -1
       addedObject: {fileID: 454897530}

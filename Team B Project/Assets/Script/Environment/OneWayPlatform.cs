@@ -5,7 +5,7 @@ using UnityEngine;
 public class OneWayPlatform : MonoBehaviour
 {
     private PlatformEffector2D effector;
-    public float waitTime = 1f;  // Waktu tunggu sebelum platform dapat dilewati kembali
+    public float waitTime = 0.5f;  // Waktu tunggu sebelum platform dapat dilewati kembali
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class OneWayPlatform : MonoBehaviour
     private void Update()
     {
         // Jika pemain menekan tombol turun (misalnya, panah bawah)
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             StartCoroutine(DropThrough());
         }
