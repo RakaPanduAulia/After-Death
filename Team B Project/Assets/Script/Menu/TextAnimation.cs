@@ -13,10 +13,4 @@ public class TextAnimation : MonoBehaviour
         // Use DOFade method to fade the CanvasGroup
         canvasGroup.DOFade(0f, 1f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
