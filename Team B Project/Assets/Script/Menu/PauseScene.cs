@@ -8,6 +8,8 @@ public class PauseScene : MonoBehaviour
     private bool isPaused = false;
     private ViewManager viewManager;
 
+    public GameObject mainEventSystem;
+
     void Start()
     {
         // Attempt to get the ViewManager component from the GameObject
@@ -37,6 +39,7 @@ public class PauseScene : MonoBehaviour
     {
         if (viewManager == null) return;
 
+        mainEventSystem.SetActive(false);
         viewManager.PlayScene(pauseMenuSceneName);
         isPaused = true;
         Time.timeScale = 0;
@@ -45,7 +48,8 @@ public class PauseScene : MonoBehaviour
     public void Resume()
     {
         if (viewManager == null) return;
-
+        
+        mainEventSystem.SetActive(true);
         viewManager.UnloadScene();
         isPaused = false;
         Time.timeScale = 1;
