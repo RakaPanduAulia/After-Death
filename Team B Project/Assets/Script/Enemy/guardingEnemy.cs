@@ -333,6 +333,7 @@ public class guardingEnemy : MonoBehaviour
 
     IEnumerator DestroyEnemy()
     {
+        gameObject.layer = LayerMask.NameToLayer("DeadEnemies");
         CapsuleCollider2D capsule = GetComponent<CapsuleCollider2D>();
         capsule.size = new Vector2(1f, 0.25f);
         capsule.offset = new Vector2(0f, -0.8f);

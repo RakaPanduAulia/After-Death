@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   isInVision: 0
 --- !u!1 &4324351727137156889
 GameObject:
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 5056463862281933002}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

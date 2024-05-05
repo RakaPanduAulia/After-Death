@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float dmgValue = 4;
+    public CharacterController2D controller;
+    public float dmgValue = 1;
     public GameObject throwableObject;
     public Transform attackCheck;
     private Rigidbody2D m_Rigidbody2D;
@@ -16,7 +17,7 @@ public class Attack : MonoBehaviour
     public GameObject cam;
     public float dashSpeed = 10f; // kecepatan dash
     public float dashTime = 0.5f; // durasi dash
-    public float dashCooldown = 1f; // cooldown dash
+    public float dashCooldown = 2f; // cooldown dash
 
     private void Awake()
     {
@@ -35,10 +36,17 @@ public class Attack : MonoBehaviour
             // Menyesuaikan rotasi karakter agar menghadap ke arah mouse
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - transform.position).normalized;
-            if (direction.x < 0) // Jika arah ke kiri, balik karakter
-                transform.localScale = new Vector3(-1, 1, 1);
-            else // Jika arah ke kanan, biarkan seperti semula
-                transform.localScale = new Vector3(1, 1, 1);
+    
+            if (direction.x < 0)
+            {
+        
+                if (controller.m_FacingRight) controller.Flip();
+            }
+            else
+            {
+                // Jika arah ke kanan, biarkan seperti semula
+                if (!controller.m_FacingRight) controller.Flip();
+            }
         }
 
         if (Input.GetMouseButtonDown(0) && canDash) // jika klik kiri dan bisa dash

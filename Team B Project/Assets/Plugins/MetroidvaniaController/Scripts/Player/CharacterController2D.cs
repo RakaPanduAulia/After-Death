@@ -26,7 +26,7 @@ public class CharacterController2D : MonoBehaviour
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	private Rigidbody2D m_Rigidbody2D;
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	public bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 velocity = Vector3.zero;
 	private float limitFallSpeed = 25f; // Limit fall speed
 
@@ -59,11 +59,6 @@ public class CharacterController2D : MonoBehaviour
 	public GameObject panel; //Panel to display when player is dead
 	public GameObject rewindPanel; 
 
-	[Header("Events")]
-	[Space]
-
-	public UnityEvent OnFallEvent;
-	public UnityEvent OnLandEvent;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
@@ -73,14 +68,20 @@ public class CharacterController2D : MonoBehaviour
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 
-		if (OnFallEvent == null)
-			OnFallEvent = new UnityEvent();
-
-		if (OnLandEvent == null)
-			OnLandEvent = new UnityEvent();
 	}
+    #region Event Fall & Land
+    public void OnFall()
+    {
+        animator.SetBool("IsJumping", true);
+    }
+    #endregion
 
-	void Start()
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
+
+    void Start()
     {
         //Inisialisasi list
         positions = new List<Vector3>();
@@ -103,7 +104,7 @@ public class CharacterController2D : MonoBehaviour
 				m_Grounded = true;
 				if (!wasGrounded )
 				{
-					OnLandEvent.Invoke();
+				OnLanding();
 					if (!m_IsWall && !isDashing) 
 						particleJumpDown.Play();
 					canDoubleJump = true;
@@ -116,7 +117,7 @@ public class CharacterController2D : MonoBehaviour
 
 		if (!m_Grounded)
 		{
-			OnFallEvent.Invoke();
+			OnFall();
 			Collider2D[] collidersWall = Physics2D.OverlapCircleAll(m_WallCheck.position, k_GroundedRadius, m_WhatIsGround);
 			for (int i = 0; i < collidersWall.Length; i++)
 			{
@@ -317,7 +318,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
-	private void Flip()
+	public void Flip()
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
