@@ -238,7 +238,7 @@ public class guardingEnemy : MonoBehaviour
             }
             else if (collidersEnemies[i].gameObject.tag == "Player")
             {
-                collidersEnemies[i].gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f, transform.position);
+                collidersEnemies[i].gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f); //, transform.position
             }
         }
         StartCoroutine(WaitToAttack(0.5f));

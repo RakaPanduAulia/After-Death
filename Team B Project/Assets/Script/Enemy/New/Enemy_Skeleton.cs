@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy_Skeleton : Entity
 {
+    [SerializeField] private Transform attackCheck;
+
     [Header("Move info")]
     [SerializeField] private float moveSpeed;
 
@@ -14,13 +16,15 @@ public class Enemy_Skeleton : Entity
 
     [Header("Enemy Settings")]
     [SerializeField] private float life = 1f;
-    [SerializeField] private float attackDamage = 1f;
+    [SerializeField] private float attackDamage = -1f;
     [SerializeField] private float attackCooldown = 0.5f;
 
     [Header("Enemy State")]
     [SerializeField] private bool isAttacking;
     [SerializeField] private bool isDead;
     [SerializeField] private bool isInvincible;
+
+
 
     private RaycastHit2D isPlayerDetected;
     private float attackTimer = 0f;
@@ -63,6 +67,8 @@ public class Enemy_Skeleton : Entity
         {
             isDead = true;
             rb.velocity = Vector2.zero;
+
+            StartCoroutine(DestroyAfterDelay());
         }
     }
 
@@ -93,6 +99,20 @@ public class Enemy_Skeleton : Entity
     private void StartAttackEvent()
     {
         isAttacking = true;
+    }
+
+    public void MeleeAttack()
+    {
+        Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f, whatIsPlayer);
+        foreach (Collider2D player in hitPlayers)
+        {
+            // Pastikan tag player diperiksa agar serangan hanya diterapkan ke objek player
+            if (player.CompareTag("Player"))
+            {
+                // Kirim pesan untuk menerapkan damage. Pastikan method ApplyDamage hanya mengurangi life.
+                player.gameObject.SendMessage("ApplyDamage", attackDamage);
+            }
+        }
     }
 
     public void AttackOver()
@@ -143,5 +163,11 @@ public class Enemy_Skeleton : Entity
 
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + playerCheckDistance * facingDir, transform.position.y));
+    }
+
+    IEnumerator DestroyAfterDelay()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }

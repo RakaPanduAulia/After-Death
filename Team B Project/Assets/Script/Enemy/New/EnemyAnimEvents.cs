@@ -15,4 +15,9 @@ public class EnemyAnimEvents : MonoBehaviour
     {
         enemy.AttackOver();
     }
+
+    private void AnimationTriggerAttack()
+    {
+        enemy.MeleeAttack();
+    }
 }

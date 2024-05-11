@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class EnterTrigger : MonoBehaviour
 {
     public SceneLoader sceneLoader;
-    
 
     void OnTriggerEnter2D(Collider2D other)
     {

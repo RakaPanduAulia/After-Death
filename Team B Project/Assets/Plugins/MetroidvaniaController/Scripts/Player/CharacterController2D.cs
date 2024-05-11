@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
-	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
-	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
-	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
+
+
+	[Header("Checker")]
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_WallCheck;								//Posicion que controla si el personaje toca una pared
+	private bool m_Grounded;									// Whether or not the player is grounded.
+	private Rigidbody2D m_Rigidbody2D;
+	public bool m_FacingRight = true;											// For determining which way the player is currently facing.
 	
 	[System.Serializable]
 	public struct PlayerState //Struct to store player state
@@ -24,37 +27,44 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-	private bool m_Grounded;            // Whether or not the player is grounded.
-	private Rigidbody2D m_Rigidbody2D;
-	public bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 velocity = Vector3.zero;
 	private float limitFallSpeed = 25f; // Limit fall speed
 
-	public bool canDoubleJump = true; //If player can double jump
+	[Header("Player Movement")]
+	[SerializeField] private bool canDash = true;
 	[SerializeField] private float m_DashForce = 25f;
-	private bool canDash = true;
+	public bool canDoubleJump = true; //If player can double jump
 	private bool isDashing = false; //If player is dashing
+	[Range(0, .3f)][SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
+	[SerializeField] private bool m_AirControl = true;                         // Whether or not a player can steer while jumping;
+	[SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
+
 	private bool m_IsWall = false; //If there is a wall in front of the player
 	private bool isWallSliding = false; //If player is sliding in a wall
 	private bool oldWallSlidding = false; //If player is sliding in a wall in the previous frame
 	private float prevVelocityX = 0f;
 	private bool canCheck = false; //For check if player is wallsliding
 
+	[Header("Player HP")]
 	public float life = 4f; //Life of the player
 	public bool invincible = false; //If player can die
 	private bool canMove = true; //If player can move
 
 	private Animator animator;
+
+	[Header("Particle System")]
 	public ParticleSystem particleJumpUp; //Trail particles
 	public ParticleSystem particleJumpDown; //Explosion particles
+
+	[Header("Other Settings")]
 
 	private float jumpWallStartX = 0;
 	private float jumpWallDistX = 0; //Distance between player and wall
 	private bool limitVelOnWallJump = false; //For limit wall jump distance with low fps
 
-	[SerializeField] private bool isRewinding = false; //If player is rewinding time
-	[SerializeField] private List<PlayerState> states; //List to store player states
-	[SerializeField] private List<Vector3> positions; //List to store positions
+	private bool isRewinding = false; //If player is rewinding time
+	private List<PlayerState> states; //List to store player states
+	private List<Vector3> positions; //List to store positions
 
 	public GameObject panel; //Panel to display when player is dead
 	public GameObject rewindPanel; 
@@ -69,6 +79,7 @@ public class CharacterController2D : MonoBehaviour
 		animator = GetComponent<Animator>();
 
 	}
+
     #region Event Fall & Land
     public void OnFall()
     {
@@ -329,16 +340,14 @@ public class CharacterController2D : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-	public void ApplyDamage(float damage, Vector3 position) 
-	{
+	public void ApplyDamage(float damage) //, Vector3 position
+    {
 		if (!invincible)
 		{
-			animator.SetBool("Hit", true);
-			life -= damage;
-			Vector2 damageDir = Vector3.Normalize(transform.position - position) * 40f ;
-			m_Rigidbody2D.velocity = Vector2.zero;
-			m_Rigidbody2D.AddForce(damageDir * 10);
-			if (life <= 0)
+            life -= damage;
+            animator.SetTrigger("Hit");
+
+            if (life <= 0)
 			{
 				StartCoroutine(WaitToDead());
 			}
