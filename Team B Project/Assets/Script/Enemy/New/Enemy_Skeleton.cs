@@ -45,12 +45,30 @@ public class Enemy_Skeleton : Entity
         AnimatorControllers();
 
         attackTimer += Time.deltaTime;
+    }
 
+    public void ApplyDamage (float damage)
+    {
+        if (!isInvincible && !isDead)
+        {
+            life -= damage;
+
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        if (life <= 0f)
+        {
+            isDead = true;
+            rb.velocity = Vector2.zero;
+        }
     }
 
     private void ChasePlayer()
     {
-        if (isPlayerDetected)
+        if (isPlayerDetected && !isDead)
         {
             if (isPlayerDetected.distance > 1 && !isAttacking)
             {
@@ -84,7 +102,7 @@ public class Enemy_Skeleton : Entity
 
     private void Movement()
     {
-        if (!isAttacking && !isPlayerDetected)
+        if (!isAttacking && !isPlayerDetected && !isDead)
         {
             rb.velocity = new Vector2(moveSpeed * facingDir, rb.velocity.y);
         }
