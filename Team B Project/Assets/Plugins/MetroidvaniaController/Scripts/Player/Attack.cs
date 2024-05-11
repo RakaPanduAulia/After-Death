@@ -15,8 +15,8 @@ public class Attack : MonoBehaviour
     public bool isTimeToCheck = false;
 
     public GameObject cam;
-    public float dashSpeed = 10f; // kecepatan dash
-    public float dashTime = 0.5f; // durasi dash
+    public float dashSpeed = 80f; // kecepatan dash
+    public float dashTime = 0.1f; // durasi dash
     public float dashCooldown = 2f; // cooldown dash
 
     private void Awake()
@@ -31,6 +31,7 @@ public class Attack : MonoBehaviour
         {
             canAttack = false;
             animator.SetBool("IsAttacking", true);
+
             StartCoroutine(AttackCooldown());
 
             // Menyesuaikan rotasi karakter agar menghadap ke arah mouse
@@ -39,7 +40,6 @@ public class Attack : MonoBehaviour
     
             if (direction.x < 0)
             {
-        
                 if (controller.m_FacingRight) controller.Flip();
             }
             else
@@ -60,10 +60,16 @@ public class Attack : MonoBehaviour
             // Menyesuaikan rotasi karakter agar menghadap ke arah mouse
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - transform.position).normalized;
-            if (direction.x < 0) // Jika arah ke kiri, balik karakter
-                transform.localScale = new Vector3(-1, 1, 1);
-            else // Jika arah ke kanan, biarkan seperti semula
-                transform.localScale = new Vector3(1, 1, 1);
+
+            if (direction.x < 0)
+            {
+                if (controller.m_FacingRight) controller.Flip();
+            }
+            else
+            {
+                // Jika arah ke kanan, biarkan seperti semula
+                if (!controller.m_FacingRight) controller.Flip();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.V))
