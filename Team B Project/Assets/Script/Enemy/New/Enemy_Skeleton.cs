@@ -17,7 +17,6 @@ public class Enemy_Skeleton : Entity
     [Header("Enemy Settings")]
     [SerializeField] private float life = 1f;
     [SerializeField] private float attackDamage = -1f;
-    [SerializeField] private float attackCooldown = 0.5f;
 
     [Header("Enemy State")]
     [SerializeField] private bool isAttacking;

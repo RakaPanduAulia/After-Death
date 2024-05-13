@@ -10,4 +10,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.UnloadSceneAsync("Pause Menu");
     }
+
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }

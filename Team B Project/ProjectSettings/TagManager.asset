@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - DeadEnemies
@@ -44,4 +44,7 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 420964227
+    locked: 0
+  - name: Ground
+    uniqueID: 4183562045
     locked: 0

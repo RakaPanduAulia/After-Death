@@ -169,11 +169,11 @@ public class CharacterController2D : MonoBehaviour
 
 		if(isRewinding)  //if player is rewinding, call rewind function and if not call record function
 		{
-            Rewind();
+            //Rewind();
 		}
         else
 		{
-            Record();
+            //Record();
 		}
 		
 		DisplayPanel();
@@ -183,12 +183,12 @@ public class CharacterController2D : MonoBehaviour
 	{		
 		if(life <= 0 && Input.GetKeyDown(KeyCode.Space)) //if the player press space, call StartRewind function and if release call StopRewind function
 		{
-			StartRewind();
+			//StartRewind();
 		}
 		
 		if(isRewinding && states.Count == 0)
 		{
-			StopRewind();
+			//StopRewind();
 		}
 	}
 
