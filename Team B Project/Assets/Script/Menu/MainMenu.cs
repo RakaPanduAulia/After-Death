@@ -11,12 +11,21 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject pressAnyKeyToStart;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject exit;
-    [SerializeField] private string sceneName;
+    [SerializeField] private GameObject fadeIn;
+    [SerializeField] private GameObject fadeOut;
+
+    [Header("AudioClip")]
+    [SerializeField] private AudioClip anyKeyToStart;
+
+    private bool isActive;
 
     private void Start()
     {
         start.SetActive(false);
         exit.SetActive(false);
+        fadeOut.SetActive(false);
+        fadeIn.SetActive(true);
+        isActive = true;
     }
 
     private void Update()
@@ -26,11 +35,13 @@ public class MainMenu : MonoBehaviour
 
     private void DisableText()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && isActive == true)
         {
-            Debug.Log("gasken");
-
             pressAnyKeyToStart.SetActive(false);
+
+            AudioController.Instance.PlaySound(anyKeyToStart);
+
+            isActive = false;
 
             start.SetActive(true);
             exit.SetActive(true);
@@ -40,10 +51,5 @@ public class MainMenu : MonoBehaviour
     public void ExitButtonPressed()
     {
         Application.Quit();
-    }
-
-    public void LoadScene()
-    {
-        SceneManager.LoadScene(sceneName);
     }
 }

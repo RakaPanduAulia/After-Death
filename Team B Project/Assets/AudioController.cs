@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,7 @@ public class AudioController : MonoBehaviour
     public static AudioController Instance;
 
     public AudioClip[] musicClips;
+    public AudioClip buttonClickSound;
     private AudioSource audioSource;
 
     private void Awake()
@@ -68,5 +70,15 @@ public class AudioController : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioSource.volume = volume;
+    }
+
+    public void PlayButtonClickSound()
+    {
+        audioSource.PlayOneShot(buttonClickSound);
+    }
+
+    internal void PlaySound(AudioClip customButtonSound)
+    {
+        audioSource.PlayOneShot(customButtonSound);
     }
 }
