@@ -17,11 +17,6 @@ public class FadeOutLoadScene : MonoBehaviour
         Invoke("FadeOutCheck", clip.length);
     }
 
-    void WaitForSecond()
-    {
-
-    }
-
     void FadeOutCheck()
     {
         SceneManager.LoadScene (indexScene);

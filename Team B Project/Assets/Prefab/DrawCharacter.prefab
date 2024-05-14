@@ -57,50 +57,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783f8b7882d2d2a42a5b76de9179978f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 850
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 53
+    m_Bits: 309
   m_GroundCheck: {fileID: 2838624934172838795}
   m_WallCheck: {fileID: 2051882870868337080}
-  canDoubleJump: 0
+  m_FacingRight: 1
+  canDash: 1
   m_DashForce: 25
+  canDoubleJump: 0
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_JumpForce: 850
   life: 10
   invincible: 0
   particleJumpUp: {fileID: 2798597369158439179}
   particleJumpDown: {fileID: 4604317904767906822}
-  OnFallEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6746213723192421947}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnFall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6746213723192421947}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnLanding
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  panel: {fileID: 0}
+  rewindPanel: {fileID: 0}
 --- !u!114 &7609255973015358976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,13 +87,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9955788a5eaffa49a9297f38eaa6202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 2164012693961612324}
   dmgValue: 4
   throwableObject: {fileID: 5532974359214069763, guid: 340067e8e5a097546ad175f1d00a6ece, type: 3}
   attackCheck: {fileID: 7978059169905873000}
   animator: {fileID: 5719197974271217014}
   canAttack: 1
+  canDash: 1
   isTimeToCheck: 0
   cam: {fileID: 0}
+  dashSpeed: 80
+  dashTime: 0.1
+  dashCooldown: 2
 --- !u!114 &6746213723192421947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96be36fcbc69e8944b5d9f089bc07112, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37b1add9cae238c4fa2e28b40180911a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,7 +176,7 @@ Animator:
   m_GameObject: {fileID: 179490977233242000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a3c27b3edc7c7dd49aa745bbedc2eed1, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -267,8 +246,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18}
-  m_Size: {x: 0.65, y: 1.7}
+  m_Offset: {x: 0, y: -0.0148996115}
+  m_Size: {x: 0.65, y: 2.2448347}
   m_Direction: 0
 --- !u!82 &1931457881453617247
 AudioSource:
@@ -378,7 +357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a8c1816f57d0448ae14701323178ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRewinding: 0
 --- !u!1 &1846856577197875531
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 5349692872265708586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.01, z: 0}
+  m_LocalPosition: {x: 0, y: -1.1029997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5200,7 +5178,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5276,7 +5253,7 @@ Transform:
   m_GameObject: {fileID: 5985391242115172143}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.09, z: 0}
+  m_LocalPosition: {x: 0, y: -1.183, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5340,7 +5317,7 @@ Transform:
   m_GameObject: {fileID: 6775052583014714681}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.06, z: 0}
+  m_LocalPosition: {x: 0, y: -1.1529996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10161,7 +10138,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -62,14 +62,6 @@ public class CharacterController2D : MonoBehaviour
 	private float jumpWallDistX = 0; //Distance between player and wall
 	private bool limitVelOnWallJump = false; //For limit wall jump distance with low fps
 
-	private bool isRewinding = false; //If player is rewinding time
-	private List<PlayerState> states; //List to store player states
-	private List<Vector3> positions; //List to store positions
-
-	public GameObject panel; //Panel to display when player is dead
-	public GameObject rewindPanel; 
-
-
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
@@ -90,15 +82,6 @@ public class CharacterController2D : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
-    }
-
-    void Start()
-    {
-        //Inisialisasi list
-        positions = new List<Vector3>();
-        //rb = GetComponent<Rigidbody>();
-		panel.SetActive(false);
-		rewindPanel.SetActive(false);
     }
 
 	private void FixedUpdate()
@@ -165,30 +148,6 @@ public class CharacterController2D : MonoBehaviour
 				limitVelOnWallJump = false;
 				m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
 			}
-		}
-
-		if(isRewinding)  //if player is rewinding, call rewind function and if not call record function
-		{
-            //Rewind();
-		}
-        else
-		{
-            //Record();
-		}
-		
-		DisplayPanel();
-	}
-
-	public void Update()
-	{		
-		if(life <= 0 && Input.GetKeyDown(KeyCode.Space)) //if the player press space, call StartRewind function and if release call StopRewind function
-		{
-			//StartRewind();
-		}
-		
-		if(isRewinding && states.Count == 0)
-		{
-			//StopRewind();
 		}
 	}
 
@@ -310,25 +269,6 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
-	private void DisplayPanel()
-	{
-		if (life <= 0)
-		{
-			panel.SetActive(true);
-			rewindPanel.SetActive(false);
-		}
-		else if (isRewinding)
-		{
-			panel.SetActive(false);
-			rewindPanel.SetActive(true);
-		}
-		else
-		{
-			panel.SetActive(false);
-			rewindPanel.SetActive(false);
-		}
-	}
-
 	public void Flip()
 	{
 		// Switch the way the player is labelled as facing.
@@ -356,66 +296,6 @@ public class CharacterController2D : MonoBehaviour
 				StartCoroutine(Stun(0.25f));
 				StartCoroutine(MakeInvincible(1f));
 			}
-		}
-	}
-
-	public void StartRewind()
-    {
-		isRewinding = true;
-		invincible = true;
-		life = 10f;
-		animator.SetBool("IsDead", false); // Mengatur animasi kembali ke "hidup"
-    	animator.ResetTrigger("Hit"); // Reset trigger animasi terkena hit jika ada
-    	m_Rigidbody2D.velocity = Vector2.zero; // Reset velocity untuk mencegah terpental
-		// GetComponent<Collider2D>().enabled = false;
-	    //rb.isKinematic = true;
-    }
-
-    //Fungsi untuk menghentikan rewind
-    public void StopRewind()
-    {
-        isRewinding = false; // Menghentikan rewind
-		invincible = false; // Menghentikan invincibility
-		m_Rigidbody2D.velocity = Vector2.zero; // Reset velocity untuk mencegah terpental
-    	canMove = true; // Mengaktifkan kembali kemampuan bergerak
-		GetComponent<Attack>().enabled = true;
-		// GetComponent<Collider2D>().enabled = true;
-        //rb.isKinematic = false;
-    } 
-
-	public void Record()
-	{
-		PlayerState currentState = new PlayerState
-		{
-			position = transform.position,
-			IsJumping = animator.GetBool("IsJumping"),
-			isDashing = isDashing,
-			isAttacking = animator.GetBool("IsAttacking"), // Asumsikan Anda memiliki parameter Animator ini
-			facingRight = m_FacingRight
-		};
-		states.Insert(0, currentState);
-	}
-
-
-	void Rewind() 
-	{
-		if (states.Count > 0) 
-		{
-			PlayerState prevState = states[0];
-			transform.position = prevState.position;
-			animator.SetBool("IsJumping", prevState.IsJumping);
-			animator.SetBool("IsDashing", prevState.isDashing);
-			animator.SetBool("IsAttacking", prevState.isAttacking);
-			
-			if (prevState.facingRight != m_FacingRight)
-			{
-				Flip();
-			}
-			states.RemoveAt(0);
-		}
-		else
-		{
-			StopRewind();
 		}
 	}
 
@@ -474,6 +354,6 @@ public class CharacterController2D : MonoBehaviour
 		GetComponent<Attack>().enabled = false;
 		yield return new WaitForSeconds(0.4f);
 		m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
-		// yield return new WaitForSeconds(1.1f);
+		yield return new WaitForSeconds(1.1f);
 	}
 }
