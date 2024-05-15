@@ -15,23 +15,13 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_Grounded;									// Whether or not the player is grounded.
 	private Rigidbody2D m_Rigidbody2D;
 	public bool m_FacingRight = true;											// For determining which way the player is currently facing.
-	
-	[System.Serializable]
-	public struct PlayerState //Struct to store player state
-	{
-		public Vector3 position;
-		public bool IsJumping;
-		public bool isDashing;
-		public bool isAttacking;
-		public bool facingRight;
-	}
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private Vector3 velocity = Vector3.zero;
 	private float limitFallSpeed = 25f; // Limit fall speed
 
 	[Header("Player Movement")]
-	[SerializeField] private bool canDash = true;
+	[SerializeField] public bool canDash = true;
 	[SerializeField] private float m_DashForce = 25f;
 	public bool canDoubleJump = true; //If player can double jump
 	private bool isDashing = false; //If player is dashing
@@ -48,7 +38,7 @@ public class CharacterController2D : MonoBehaviour
 	[Header("Player HP")]
 	public float life = 4f; //Life of the player
 	public bool invincible = false; //If player can die
-	private bool canMove = true; //If player can move
+	public bool canMove = true; //If player can move
 
 	private Animator animator;
 

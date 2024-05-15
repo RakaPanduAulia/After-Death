@@ -54,7 +54,7 @@ public class AudioController : MonoBehaviour
             case "IntroCutscene":
                 clipIndex = 1;
                 break;
-            case "Level1.1":
+            case "Level1.1ArkaEntry":
                 clipIndex = 2;
                 break;
                 // Add more cases as needed for each scene

@@ -306,7 +306,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894491
@@ -325,7 +325,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 10
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 8300000, guid: c19033d8633d18c4b96f2b9911ce85d4, type: 3}
 --- !u!114 &87894492
@@ -344,7 +344,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 9
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 8300000, guid: c19033d8633d18c4b96f2b9911ce85d4, type: 3}
 --- !u!114 &87894493
@@ -363,7 +363,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 12
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894494
@@ -382,7 +382,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 11
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894495
@@ -401,7 +401,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 16
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894496
@@ -420,7 +420,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 15
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894497
@@ -439,7 +439,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 14
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894498
@@ -458,7 +458,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 13
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894499
@@ -477,7 +477,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 23
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894500
@@ -496,7 +496,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 22
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894501
@@ -515,7 +515,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 21
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894502
@@ -534,7 +534,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 20
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894503
@@ -553,7 +553,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 19
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894504
@@ -584,7 +584,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 18
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894505
@@ -615,7 +615,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 17
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894506
@@ -634,7 +634,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 25
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894507
@@ -665,7 +665,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 36
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894508
@@ -684,7 +684,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 35
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894509
@@ -715,7 +715,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 34
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894510
@@ -734,7 +734,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 33
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894511
@@ -753,7 +753,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 32
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894512
@@ -772,7 +772,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 31
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894513
@@ -791,7 +791,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 30
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894514
@@ -810,7 +810,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 29
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894515
@@ -829,7 +829,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 28
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894516
@@ -848,7 +848,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 27
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894517
@@ -879,7 +879,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 26
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &87894518
@@ -5858,6 +5858,18 @@ PrefabInstance:
       value: 176
       objectReference: {fileID: 0}
     - target: {fileID: 3900108754347413305, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_margin.x
+      value: -123.44275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108754347413305, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_margin.y
+      value: 35.269363
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108754347413305, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_margin.z
+      value: 30.082764
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108754347413305, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_textAlignment
       value: 65535
       objectReference: {fileID: 0}
@@ -5868,6 +5880,26 @@ PrefabInstance:
     - target: {fileID: 3900108755062758285, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_Name
       value: ConversationManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: ScrollText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: ScrollSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: OptionImageSliced
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: AllowMouseInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: BackgroundImageSliced
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_Pivot.x
@@ -5949,9 +5981,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3900108755397112056, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_fontSize
+      value: 23.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_textAlignment
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9168311732092323646, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
       objectReference: {fileID: 0}
     - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_TextStyleHashCode
@@ -5964,6 +6028,26 @@ PrefabInstance:
     - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116449485086562217, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449887092502888396, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 109.1683
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449887092502888396, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 23.1749
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449887092502888396, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449887092502888396, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 33.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6028,12 +6112,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 07e524e30b148654f98b87415358dd53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3d5fd5dae1ed684e9ec3f482c398dee, type: 3}
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.89, y: 10.1}
+  m_Size: {x: 0.87, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6049,7 +6133,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 3.11, y: -0.44, z: 0}
-  m_LocalScale: {x: 0.30173, y: 0.30173, z: 0.30173}
+  m_LocalScale: {x: 1.5274478, y: 1.5274478, z: 1.5274478}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6379,12 +6463,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 07e524e30b148654f98b87415358dd53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3d5fd5dae1ed684e9ec3f482c398dee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.87, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6400,7 +6484,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.41, y: -0.47, z: 0}
-  m_LocalScale: {x: 0.30173, y: 0.30173, z: 0.30173}
+  m_LocalScale: {x: 1.4751883, y: 1.4751883, z: 1.4751883}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -11494,47 +11578,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 39
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":44,\"yPos\":653.800049},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes\",\"parentUIDs\":[12],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":340,\"yPos\":653.800049},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"It\u2019s
-    just a job\",\"parentUIDs\":[12],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":32,\"yPos\":1179.8},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Please,
-    have mercy on me\",\"parentUIDs\":[18],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":339,\"yPos\":1180.8},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"So
-    be it\",\"parentUIDs\":[18],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":2,\"yPos\":2365.7998},\"ID\":31,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes\",\"parentUIDs\":[30],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":344,\"yPos\":2365.7998},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No\",\"parentUIDs\":[30],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":184.299988,\"yPos\":79.99997},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    You dedicated your life to serve the king of Jagannatha as an assassin \u201D\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":185.299988,\"yPos\":294.800049},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    Throughout your life, you have killed countless innocent people \u201D\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":184.299988,\"yPos\":183.800018},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".
-    . . . . . .\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":185,\"yPos\":401.800049},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".
-    . . . . . .\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":184,\"yPos\":518.800049},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    Do you feel any regret? \u201D\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":43,\"yPos\":778.800049},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    Unfortunately, it\u2019s too late for any regret \u201D\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":334,\"yPos\":776.800049},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":64,\"yPos\":655.800049},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes\",\"parentUIDs\":[12],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":360,\"yPos\":655.800049},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"It\u2019s
+    just a job\",\"parentUIDs\":[12],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":52,\"yPos\":1181.8},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Please,
+    have mercy on me\",\"parentUIDs\":[18],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":359,\"yPos\":1182.8},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"So
+    be it\",\"parentUIDs\":[18],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":22,\"yPos\":2367.7998},\"ID\":31,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes\",\"parentUIDs\":[30],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":359,\"yPos\":2357.7998},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No\",\"parentUIDs\":[30],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":204.299988,\"yPos\":81.99997},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    You dedicated your life to serve the king of Jagannatha as an assassin \u201D\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":205.299988,\"yPos\":296.8},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    Throughout your life, you have killed countless innocent people \u201D\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":204.299988,\"yPos\":185.800018},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".
+    . . . . . .\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":205,\"yPos\":403.800049},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\".
+    . . . . . .\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":204,\"yPos\":519.800049},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    Do you feel any regret? \u201D\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":63,\"yPos\":780.800049},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    Unfortunately, it\u2019s too late for any regret \u201D\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":354,\"yPos\":778.800049},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     Right, it\u2019s just a job. Just like the things I\u2019m about to do to you
-    \u201D\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":195,\"yPos\":911.800049},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    Your punishment is! \u201D\",\"parentUIDs\":[15,16],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":195,\"yPos\":1040.80029},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    Boiled in blood forever \u201D\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":33,\"yPos\":1290.8},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    \u201D\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":215,\"yPos\":913.8},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    Your punishment is! \u201D\",\"parentUIDs\":[15,16],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":215,\"yPos\":1042.80029},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    Boiled in blood forever \u201D\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":53,\"yPos\":1292.8},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     It\u2019s too late for any mercy. But, lucky for you I need someone who has skills
-    like you \u201D\",\"parentUIDs\":[19],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":338,\"yPos\":1290.8},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    like you \u201D\",\"parentUIDs\":[19],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":358,\"yPos\":1292.8},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     Wow, You seem ready to accept your punishment. However, you haven\u2019t heard
-    what I have to offer yet \u201D\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":174,\"yPos\":1440.8},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    I need you to kill your former employer \u201D\",\"parentUIDs\":[21,22],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":171,\"yPos\":1587.8},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    what I have to offer yet \u201D\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":194,\"yPos\":1442.8},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    I need you to kill your former employer \u201D\",\"parentUIDs\":[21,22],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":192,\"yPos\":1589.8},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     King Yamakara is ruthless to his people. He has stolen a lot of people\u2019s
     earnings by setting high taxes for his people. And killed anyone who opposed
-    him \u201D\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":173,\"yPos\":1709.8},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    He had also avoided death many times. It irritates me \u201D\",\"parentUIDs\":[25],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":173,\"yPos\":1838.8},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    him \u201D\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":193,\"yPos\":1711.8},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    He had also avoided death many times. It irritates me \u201D\",\"parentUIDs\":[25],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":193,\"yPos\":1840.8},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     I want you to make him suffer. Not just by killing him, but also by killing his
-    entire family \u201D\",\"parentUIDs\":[26],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":172,\"yPos\":1975.8},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    entire family \u201D\",\"parentUIDs\":[26],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":192,\"yPos\":1977.8},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     After all, his family also enjoyed the fruits of other people\u2019s hard work
-    \u201D\",\"parentUIDs\":[27],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":30}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":171,\"yPos\":2111.8},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    If you successfully complete this task, I will give you a lenient sentence \u201D\",\"parentUIDs\":[28],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":31},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":168,\"yPos\":2227.7998},\"ID\":30,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    Do you accept this task? \u201D\",\"parentUIDs\":[29],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":0,\"yPos\":2465.8},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
-    Good\u2026 \u201D\",\"parentUIDs\":[31],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":36}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":344,\"yPos\":2466.8},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    \u201D\",\"parentUIDs\":[27],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":30}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":191,\"yPos\":2112.8},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    If you successfully complete this task, I will give you a lenient sentence \u201D\",\"parentUIDs\":[28],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":31},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":188,\"yPos\":2229.7998},\"ID\":30,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    Do you accept this task? \u201D\",\"parentUIDs\":[29],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":20,\"yPos\":2467.8},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    Good\u2026 \u201D\",\"parentUIDs\":[31],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":36}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":364,\"yPos\":2468.8},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     DO YOU REALLY THINK YOU HAVE A CHOICE??? LOOK WHERE YOU ARE! YOU\u2019RE ALREADY
-    IN HELL! I OWN YOUR LIFE! I CAN DO WHATEVER I WANT WITH YOU! \u201D\",\"parentUIDs\":[32],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":38}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":2,\"yPos\":2590.8},\"ID\":35,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    IN HELL! I OWN YOUR LIFE! I CAN DO WHATEVER I WANT WITH YOU! \u201D\",\"parentUIDs\":[32],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":38}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":22,\"yPos\":2592.8},\"ID\":35,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     Just a precaution to make sure you do your job after I bring you back. This mark
     will give you pain if you don\u2019t finish your tasks. But don\u2019t worry,
-    you won\u2019t feel any pain as long as you do your task \u201D\",\"parentUIDs\":[33],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":37}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":343,\"yPos\":2591.8},\"ID\":36,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
+    you won\u2019t feel any pain as long as you do your task \u201D\",\"parentUIDs\":[33],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":37}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":363,\"yPos\":2593.8},\"ID\":36,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u201C
     I want you to kill the king and his family and you will do it for me. If not,
-    YOU\u2019LL GET A HARSHER PUNISHMENT \u201D\",\"parentUIDs\":[34],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":343,\"yPos\":2701.8},\"ID\":37,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":null,\"parentUIDs\":[36],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":6,\"yPos\":2701.8},\"ID\":38,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":null,\"parentUIDs\":[35],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    YOU\u2019LL GET A HARSHER PUNISHMENT \u201D\",\"parentUIDs\":[34],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Death\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":363,\"yPos\":2700.8},\"ID\":37,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":null,\"parentUIDs\":[36],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":23,\"yPos\":2701.8},\"ID\":38,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":null,\"parentUIDs\":[35],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
-  DefaultName: 
+  DefaultName: Death
   DefaultSprite: {fileID: 0}
-  DefaultFont: {fileID: 0}
+  DefaultFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   NodeSerializedDataList:
   - {fileID: 87894490}
   - {fileID: 87894492}
@@ -11566,8 +11650,8 @@ MonoBehaviour:
   - {fileID: 87894507}
   - {fileID: 87894519}
   - {fileID: 87894518}
-  ContinueFont: {fileID: 0}
-  EndConversationFont: {fileID: 0}
+  ContinueFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
+  EndConversationFont: {fileID: 11400000, guid: db1ef3f5d2bd76c43ad5e8ebc2075da2, type: 2}
   Event:
     m_PersistentCalls:
       m_Calls:
