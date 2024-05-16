@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnterTrigger : MonoBehaviour
 {
-    public SceneLoader sceneLoader;
+    // Create a UnityEvent field
+    public UnityEvent onPlayerEnter;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Load the scene with the specified name
-            sceneLoader.LoadScene();
+            // Invoke the event
+            onPlayerEnter.Invoke();
         }
     }
 }

@@ -100701,13 +100701,9 @@ PrefabInstance:
       value: NextScene
       objectReference: {fileID: 0}
     - target: {fileID: 1607921182851352727, guid: e86f72de3b2d50540b7f65a4ce7349c6, type: 3}
-      propertyPath: sceneLoader
+      propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8310736722094681861, guid: e86f72de3b2d50540b7f65a4ce7349c6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.061356
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3100205692719140637}
     - target: {fileID: 8310736722094681861, guid: e86f72de3b2d50540b7f65a4ce7349c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 111.69
@@ -107046,6 +107042,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c965a5c8fc650e041a30ef2cd07aca71, type: 3}
+--- !u!114 &3100205692719140637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5182555836897013667, guid: c965a5c8fc650e041a30ef2cd07aca71, type: 3}
+  m_PrefabInstance: {fileID: 3100205692719140636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428021280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b6cda0a5e75e34486a55aafd075f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3287418483662953899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107336,7 +107343,9 @@ PrefabInstance:
       value: 253.80003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7170160467476083319, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
+    - {fileID: 4118278319214891822, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8602826216388613627, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
       insertIndex: -1
