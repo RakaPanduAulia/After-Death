@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3970917635275176537}
   - component: {fileID: 3849695157802103380}
   - component: {fileID: 1931457881453617247}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: DrawCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7978059169905873000}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 2203588257844926791}
   - component: {fileID: 2798597369158439179}
   - component: {fileID: 5036032447717361380}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: SmokeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5223,7 +5223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2838624934172838795}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5254,7 +5254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2051882870868337080}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5287,7 +5287,7 @@ GameObject:
   - component: {fileID: 7633203641556336594}
   - component: {fileID: 4604317904767906822}
   - component: {fileID: 3216761443146544595}
-  m_Layer: 1
+  m_Layer: 15
   m_Name: SmokeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}

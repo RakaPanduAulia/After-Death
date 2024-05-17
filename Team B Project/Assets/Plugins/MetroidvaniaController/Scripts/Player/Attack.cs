@@ -37,7 +37,7 @@ public class Attack : MonoBehaviour
             // Menyesuaikan rotasi karakter agar menghadap ke arah mouse
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - transform.position).normalized;
-    
+
             if (direction.x < 0)
             {
                 if (controller.m_FacingRight) controller.Flip();
@@ -70,14 +70,6 @@ public class Attack : MonoBehaviour
                 // Jika arah ke kanan, biarkan seperti semula
                 if (!controller.m_FacingRight) controller.Flip();
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            GameObject throwableWeapon = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f, -0.2f), Quaternion.identity) as GameObject;
-            Vector2 direction = new Vector2(transform.localScale.x, 0);
-            throwableWeapon.GetComponent<ThrowableWeapon>().direction = direction;
-            throwableWeapon.name = "ThrowableWeapon";
         }
     }
 
@@ -112,16 +104,16 @@ public class Attack : MonoBehaviour
     public void DoDashDamage()
     {
         dmgValue = Mathf.Abs(dmgValue);
-        Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f);
-        for (int i = 0; i < collidersEnemies.Length; i++)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f);
+        for (int i = 0; i < colliders.Length; i++)
         {
-            if (collidersEnemies[i].gameObject.tag == "Enemy")
+            if (colliders[i].gameObject.CompareTag("Enemy") || colliders[i].gameObject.CompareTag("Destructible"))
             {
-                if (collidersEnemies[i].transform.position.x - transform.position.x < 0)
+                if (colliders[i].transform.position.x - transform.position.x < 0)
                 {
                     dmgValue = -dmgValue;
                 }
-                collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
+                colliders[i].gameObject.SendMessage("ApplyDamage", dmgValue);
                 cam.GetComponent<CameraFollow>().ShakeCamera();
             }
         }
