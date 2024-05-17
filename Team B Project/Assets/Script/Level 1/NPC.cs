@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E)) //&& AllEnemiesDefeated()
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && AllEnemiesDefeated())
         {
             TriggerDialogue();
         }
@@ -34,5 +34,11 @@ public class NPC : MonoBehaviour
         {
             isPlayerInRange = false;
         }
+    }
+
+    private bool AllEnemiesDefeated()
+    {
+        // Check if all enemies are defeated
+        return EnemyManager.Instance != null && EnemyManager.Instance.GetRemainingEnemies() == 0;
     }
 }
