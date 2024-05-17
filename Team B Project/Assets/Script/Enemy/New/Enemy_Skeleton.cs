@@ -105,14 +105,20 @@ public class Enemy_Skeleton : Entity
         Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f, whatIsPlayer);
         foreach (Collider2D player in hitPlayers)
         {
-            // Pastikan tag player diperiksa agar serangan hanya diterapkan ke objek player
             if (player.CompareTag("Player"))
             {
-                // Kirim pesan untuk menerapkan damage. Pastikan method ApplyDamage hanya mengurangi life.
-                player.gameObject.SendMessage("ApplyDamage", attackDamage);
+                // Define the knockback force
+                Vector2 knockbackForce = new Vector2(5, 5); // Adjust as necessary
+
+                // Create an array to hold the parameters
+                object[] parameters = { attackDamage, knockbackForce };
+
+                // Send message with both damage and knockback parameters
+                player.gameObject.SendMessage("ApplyDamage", parameters);
             }
         }
     }
+
 
     public void AttackOver()
     {

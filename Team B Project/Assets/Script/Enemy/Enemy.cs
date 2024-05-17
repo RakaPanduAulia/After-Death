@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour {
 	{
 		if (collision.gameObject.tag == "Player" && life > 0)
 		{
-			collision.gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f); //, transform.position
+			//collision.gameObject.GetComponent<CharacterController2D>().ApplyDamage(1, new Vector2(5, 5)); //, transform.position
         }
 	}
 
