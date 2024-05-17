@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Skeleton : Entity
@@ -33,6 +32,8 @@ public class Enemy_Skeleton : Entity
         base.Start();
 
         isInvincible = false;
+
+        EnemyManager.Instance.RegisterEnemy(gameObject);
     }
 
     protected override void Update()
@@ -54,7 +55,9 @@ public class Enemy_Skeleton : Entity
     {
         if (!isInvincible && !isDead)
         {
-            life -= damage;
+            life += damage;
+
+            Debug.Log($"{gameObject.name} took {damage} damage, remaining life: {life}");
 
             Die();
         }
@@ -66,6 +69,8 @@ public class Enemy_Skeleton : Entity
         {
             isDead = true;
             rb.velocity = Vector2.zero;
+
+            EnemyManager.Instance.UnregisterEnemy(gameObject);
 
             StartCoroutine(DestroyAfterDelay());
         }
@@ -134,7 +139,7 @@ public class Enemy_Skeleton : Entity
 
         if (isAttacking)
         {
-            rb.velocity = new Vector2(0, 0);
+            rb.velocity = Vector2.zero;
         }
     }
 

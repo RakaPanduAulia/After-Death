@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using DG.Tweening.Core.Easing;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -48,6 +49,9 @@ public class CharacterController2D : MonoBehaviour
     private float jumpWallStartX = 0;
     private float jumpWallDistX = 0; // Distance between player and wall
     private bool limitVelOnWallJump = false; // For limit wall jump distance with low fps
+
+    [Header("UI Elements")]
+    [SerializeField] private GameObject respawnPanel;
 
     [System.Serializable]
     public class BoolEvent : UnityEvent<bool> { }
@@ -275,6 +279,11 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    public void FallDeath()
+    {
+        life = 0;
+        StartCoroutine(WaitToDead());
+    }
 
     private void ApplyKnockback(Vector2 knockback)
     {
@@ -339,6 +348,8 @@ public class CharacterController2D : MonoBehaviour
         invincible = true;
         GetComponent<Attack>().enabled = false;
         yield return new WaitForSeconds(0.4f);
+        Time.timeScale = 0f; // Stop the game time
+        respawnPanel.SetActive(true); // Show the respawn panel
         m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
         yield return new WaitForSeconds(1.1f);
     }

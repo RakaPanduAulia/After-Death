@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Starter : MonoBehaviour
 {
@@ -11,5 +12,7 @@ public class Starter : MonoBehaviour
     {
         fadeOut.SetActive(false);
         fadeIn.SetActive(true);
+
+        GameManager.instance.SaveGame(SceneManager.GetActiveScene().name);
     }
 }

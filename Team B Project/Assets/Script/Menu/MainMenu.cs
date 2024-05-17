@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject exit;
     [SerializeField] private GameObject fadeIn;
     [SerializeField] private GameObject fadeOut;
+    [SerializeField] private Button continueButton;
 
     [Header("AudioClip")]
     [SerializeField] private AudioClip anyKeyToStart;
@@ -23,9 +24,12 @@ public class MainMenu : MonoBehaviour
     {
         start.SetActive(false);
         exit.SetActive(false);
+        continueButton.gameObject.SetActive(false); // Corrected method call
         fadeOut.SetActive(false);
         fadeIn.SetActive(true);
         isActive = true;
+
+        continueButton.interactable = GameManager.instance.HasSaveData();
     }
 
     private void Update()
@@ -35,7 +39,7 @@ public class MainMenu : MonoBehaviour
 
     private void DisableText()
     {
-        if (Input.anyKeyDown && isActive == true)
+        if (Input.anyKeyDown && isActive)
         {
             pressAnyKeyToStart.SetActive(false);
 
@@ -43,13 +47,24 @@ public class MainMenu : MonoBehaviour
 
             isActive = false;
 
+            continueButton.gameObject.SetActive(true); // Corrected method call
             start.SetActive(true);
             exit.SetActive(true);
         }
     }
 
+    public void NewGame()
+    {
+        GameManager.instance.SaveGame("Level1");
+    }
+
     public void ExitButtonPressed()
     {
         Application.Quit();
+    }
+
+    public void ContinueGame()
+    {
+        GameManager.instance.LoadGame();
     }
 }
