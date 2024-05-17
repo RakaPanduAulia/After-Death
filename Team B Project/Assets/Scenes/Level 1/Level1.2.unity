@@ -1305,10 +1305,6 @@ PrefabInstance:
       propertyPath: respawnPanel
       value: 
       objectReference: {fileID: 513214245}
-    - target: {fileID: 5719197974271217014, guid: 8776c022cd1e00145854045f552e324e, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 00e0347627f7e6e44af9a4c13d098df2, type: 2}
     - target: {fileID: 7609255973015358976, guid: 8776c022cd1e00145854045f552e324e, type: 3}
       propertyPath: cam
       value: 
@@ -37918,34 +37914,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 681692553496118094, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 681692553496118094, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 681692553496118094, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 681692553496118094, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 225
-      objectReference: {fileID: 0}
-    - target: {fileID: 1191808861135752040, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1870167189191542760, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 906045847}
-    - target: {fileID: 3339203071862423686, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
-      propertyPath: respawnPanel
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7136723553336583770, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
       propertyPath: m_Name
       value: Ui Canvas
@@ -38030,10 +38002,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3339203071862423686, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 1191808861135752040, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}

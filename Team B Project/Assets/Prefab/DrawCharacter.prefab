@@ -73,6 +73,7 @@ MonoBehaviour:
   canMove: 1
   particleJumpUp: {fileID: 2798597369158439179}
   particleJumpDown: {fileID: 4604317904767906822}
+  respawnPanel: {fileID: 0}
 --- !u!114 &7609255973015358976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,16 +88,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2164012693961612324}
   dmgValue: 4
-  throwableObject: {fileID: 5532974359214069763, guid: 340067e8e5a097546ad175f1d00a6ece, type: 3}
   attackCheck: {fileID: 7978059169905873000}
   animator: {fileID: 5719197974271217014}
   canAttack: 1
   canDash: 1
-  isTimeToCheck: 0
   cam: {fileID: 0}
   dashSpeed: 80
   dashTime: 0.1
   dashCooldown: 2
+  dashWaitTime: 1
 --- !u!114 &6746213723192421947
 MonoBehaviour:
   m_ObjectHideFlags: 0
