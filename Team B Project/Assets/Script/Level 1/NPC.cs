@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E)) //&& AllEnemiesDefeated()
         {
             TriggerDialogue();
         }
