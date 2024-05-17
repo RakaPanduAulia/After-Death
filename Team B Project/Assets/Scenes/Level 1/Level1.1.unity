@@ -100150,6 +100150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrawCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 2164012693961612324, guid: 8776c022cd1e00145854045f552e324e, type: 3}
+      propertyPath: respawnPanel
+      value: 
+      objectReference: {fileID: 2070124094}
     - target: {fileID: 7609255973015358976, guid: 8776c022cd1e00145854045f552e324e, type: 3}
       propertyPath: cam
       value: 
@@ -105871,6 +105875,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4542489516771230942, guid: 87e450dc9f03afe49a8399cad89e00df, type: 3}
   m_PrefabInstance: {fileID: 1948081682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2070124094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1191808861135752040, guid: 585fbbc425f03f144a91bd63b05fcd5e, type: 3}
+  m_PrefabInstance: {fileID: 5873954594446934374}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2089766132
 GameObject:
