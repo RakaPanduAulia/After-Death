@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
+using UnityEngine.SceneManagement;
 
 public class FirstMonologue : MonoBehaviour
 {
@@ -16,7 +17,14 @@ public class FirstMonologue : MonoBehaviour
         fadeOut.SetActive(false);
         fadeIn.SetActive(true);
 
+        OnLevelComplete();
+
         StartCoroutine(WaitForSecond());
+    }
+
+    private void OnLevelComplete()
+    {
+        GameManager.instance.SaveGame(SceneManager.GetActiveScene().name);
     }
 
     IEnumerator WaitForSecond()

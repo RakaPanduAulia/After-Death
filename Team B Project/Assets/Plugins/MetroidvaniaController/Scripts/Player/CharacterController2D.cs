@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using DG.Tweening.Core.Easing;
 
 public class CharacterController2D : MonoBehaviour
 {
