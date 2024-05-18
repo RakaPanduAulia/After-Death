@@ -45,7 +45,7 @@ public class DestructibleObject : MonoBehaviour
 
     public void ApplyDamage(float damage)
     {
-        life -= damage;
+        life += damage;
         shakeDuration = 0.1f;
     }
 }

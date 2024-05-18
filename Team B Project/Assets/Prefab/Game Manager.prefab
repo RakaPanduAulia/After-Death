@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8373829754361575404}
   - component: {fileID: 7724841275407075586}
   - component: {fileID: 2050861949264946647}
+  - component: {fileID: 7180650994253060225}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -59,6 +60,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a830eb49c4fc7974a879a3a97bb4aa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7180650994253060225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176744350795403527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8669e84eb409da945b87c7e05cda8c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7606535759887507746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,6 +80,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8373829754361575404}
     m_Modifications:
+    - target: {fileID: 1409343850345065802, guid: 30f90f5e01f2ce84586b86e1a5c3b982, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a04a10235bb46cc47bcd8969eba2f7cf, type: 3}
     - target: {fileID: 3238046370027587735, guid: 30f90f5e01f2ce84586b86e1a5c3b982, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

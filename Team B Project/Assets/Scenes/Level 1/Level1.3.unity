@@ -4826,9 +4826,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7176744350795403527, guid: ec4b9a5757d02b341b7dc3f2ef33f654, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1301663133}
-    - targetCorrespondingSourceObject: {fileID: 7176744350795403527, guid: ec4b9a5757d02b341b7dc3f2ef33f654, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1301663134}
   m_SourcePrefab: {fileID: 100100000, guid: ec4b9a5757d02b341b7dc3f2ef33f654, type: 3}
 --- !u!1 &790706958
@@ -5901,18 +5898,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7176744350795403527, guid: ec4b9a5757d02b341b7dc3f2ef33f654, type: 3}
   m_PrefabInstance: {fileID: 734165526}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1301663133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301663132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8669e84eb409da945b87c7e05cda8c01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1301663134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6231,10 +6216,6 @@ PrefabInstance:
     - target: {fileID: 4134682385807574097, guid: 0cbc0c16535e9e94fb74ee4841b2f9ab, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134682385807574097, guid: 0cbc0c16535e9e94fb74ee4841b2f9ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8510551173457674074, guid: 0cbc0c16535e9e94fb74ee4841b2f9ab, type: 3}
       propertyPath: m_LocalPosition.x

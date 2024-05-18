@@ -17,14 +17,7 @@ public class FirstMonologue : MonoBehaviour
         fadeOut.SetActive(false);
         fadeIn.SetActive(true);
 
-        OnLevelComplete();
-
         StartCoroutine(WaitForSecond());
-    }
-
-    private void OnLevelComplete()
-    {
-        GameManager.instance.SaveGame(SceneManager.GetActiveScene().name);
     }
 
     IEnumerator WaitForSecond()

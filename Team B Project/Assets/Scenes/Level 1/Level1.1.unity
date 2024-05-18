@@ -105676,6 +105676,20 @@ MonoBehaviour:
   fadeIn: {fileID: 1619554617}
   fadeOut: {fileID: 428021280}
   monolog: {fileID: 1659856982}
+--- !u!114 &1876072357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876072353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd136630ba83a4498975efbe71edc5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeIn: {fileID: 1619554617}
+  fadeOut: {fileID: 428021280}
 --- !u!1 &1893779349
 GameObject:
   m_ObjectHideFlags: 0
@@ -105972,6 +105986,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 255212765250489327, guid: b9eb8050156010240877a49451201094, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1876072355}
+    - targetCorrespondingSourceObject: {fileID: 255212765250489327, guid: b9eb8050156010240877a49451201094, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1876072357}
   m_SourcePrefab: {fileID: 100100000, guid: b9eb8050156010240877a49451201094, type: 3}
 --- !u!4 &2065803139 stripped
 Transform:
