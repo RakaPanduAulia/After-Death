@@ -127,6 +127,7 @@ public class Enemy_Skeleton : Entity
 
     public void AttackOver()
     {
+        StartCoroutine(WaitAfterAttack());
         isAttacking = false;
     }
 
@@ -179,5 +180,10 @@ public class Enemy_Skeleton : Entity
     {
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
+    }
+
+    IEnumerator WaitAfterAttack()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }
