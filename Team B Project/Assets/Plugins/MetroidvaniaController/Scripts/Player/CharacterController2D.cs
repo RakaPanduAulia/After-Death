@@ -220,7 +220,7 @@ public class CharacterController2D : MonoBehaviour
                     m_Rigidbody2D.AddForce(new Vector2(transform.localScale.x * m_JumpForce * 1.2f, m_JumpForce));
                     jumpWallStartX = transform.position.x;
                     limitVelOnWallJump = true;
-                    canDoubleJump = true;
+                    canDoubleJump = false;
                     isWallSliding = false;
                     animator.SetBool("IsWallSliding", false);
                     oldWallSlidding = false;
