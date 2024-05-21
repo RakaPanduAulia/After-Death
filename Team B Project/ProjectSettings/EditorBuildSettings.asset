@@ -42,6 +42,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2/Level 2.4.unity
     guid: bb84931d979d8f849aef645b4d3083e1
   - enabled: 1
+    path: Assets/Scenes/Level 3/Level 3.1.unity
+    guid: 55305ef310c90f64d9a55d065854d6c0
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level 3.2.unity
+    guid: a89d0cd6e8b89064db0d809553857c02
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level 3.3.unity
+    guid: 8e03f7ddfa6aa24468b9c32d54b16be2
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level 3.4.unity
+    guid: ed2fe4d5091c6e447827733c87c29733
+  - enabled: 1
+    path: Assets/Scenes/Level 3/LevelEndingDialogue.unity
+    guid: 9481e2fcef106c349b875da8933e0990
+  - enabled: 1
     path: Assets/Scenes/Menu/Pause Menu.unity
     guid: 050af7c51954052419d84fb44ec8c23c
   m_configObjects: {}
